@@ -199,8 +199,8 @@ IC
         assert output.strip() == "7"
 
     def test_lambda(self):
-        code = '''
-double = \\ x : x * 2
+        code = r'''
+double = \ x : x * 2
 * double(5)
 '''
         output = capture_output(code)
@@ -242,7 +242,7 @@ class TestStrings:
         assert output.strip() == "Hello World"
 
     def test_escape_newline(self):
-        output = capture_output('* "line1\\nline2"')
+        output = capture_output(r'* "line1\nline2"')
         assert "line1" in output and "line2" in output
 
 
