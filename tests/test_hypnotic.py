@@ -216,13 +216,16 @@ nums = [1 2 3]
         output = capture_output(code)
         assert output.strip() == "1"
 
-    def test_array_length(self):
+    def test_array_iteration(self):
         code = '''
-nums = [1 2 3 4 5]
-* nums"
+nums = [1 2 3]
+4 x n nums
+* x
+IC
 '''
         output = capture_output(code)
-        assert output.strip() == "5"
+        lines = output.strip().split('\n')
+        assert lines == ['1', '2', '3']
 
 
 class TestComments:
