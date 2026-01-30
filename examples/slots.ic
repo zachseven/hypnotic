@@ -1,0 +1,26 @@
+fuck Slot Machine
+fuck feeling lucky?
+
+-> random
+
+* "=== SLOT MACHINE ==="
+* "pulling the lever..."
+* ""
+
+a = random.randint(1, 6)
+b = random.randint(1, 6)
+c = random.randint(1, 6)
+
+* "[ " + a + " | " + b + " | " + c + " ]"
+* ""
+
+? a iz b & b iz c
+    * "JACKPOT! all three match!"
+    * "u win big!"
+file a iz b or b iz c or a iz c
+    * "2 match - small win"
+    * "not bad"
+Ls
+    * "no matches"
+    * "the house always wins"
+IC

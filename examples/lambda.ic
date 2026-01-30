@@ -1,0 +1,21 @@
+fuck Lambda expressions
+fuck quick functions for quick people
+
+* "=== LAMBDA DEMO ==="
+* ""
+
+fuck basic lambda
+double = \ x : x * 2
+* "double(5) = " + double(5)
+* "double(21) = " + double(21)
+
+fuck lambda with multiple params
+add = \ a b : a + b
+* "add(3, 4) = " + add(3, 4)
+
+fuck lambda for comparison
+bigger = \ a b : ? a > b a Ls b IC
+fuck ok that one doesn't work but you get the idea
+
+* ""
+* "lambdas: because typing 'fun' is 2 much work"

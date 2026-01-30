@@ -1,0 +1,27 @@
+fuck Number guessing game
+fuck Try 2 guess what IC is thinking
+
+-> random
+
+secret = random.randint(1, 100)
+guess = 0
+attempts = 0
+
+* "IC is thinking of a number between 1 and 100..."
+* "Can u guess it?"
+* ""
+
+wyl guess aint secret
+    guess = PV "Your guess: "
+    guess = int(guess)
+    attempts = attempts + 1
+
+    ? guess < secret
+        * "2 low! try again"
+    file guess > secret
+        * "2 high! try again"
+    Ls
+        * "U got it!"
+        * "It took u " + attempts + " tries"
+    IC
+IC

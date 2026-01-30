@@ -1,0 +1,56 @@
+fuck ========================================
+fuck   hypnotIC SHOWCASE
+fuck   "I see what you meant"
+fuck ========================================
+
+* "Welcome to hypnotIC!"
+* ""
+
+fuck --- VARIABLES ---
+name = "World"
+age = 25
+active = t
+
+* "Name: " + name
+* "Age: " + age
+
+fuck --- CONDITIONALS ---
+? age > 21
+* "You're an adult"
+file age > 18
+* "Almost there"
+Ls
+* "Too young"
+IC
+
+fuck --- LOOPS ---
+* ""
+* "Counting:"
+4 i n 5
+* i
+IC
+
+fuck --- FUNCTIONS ---
+fun greet person
+* "Hello, " + person + "!"
+IC
+
+fun add a b
+re: a + b
+IC
+
+* ""
+greet("hypnotIC")
+* "3 + 4 = " + add(3, 4)
+
+fuck --- MATH ---
+* ""
+* "Math:"
+* "2 + 2 = " + (2 + 2)
+* "10 - 3 = " + (10 - 3)
+* "5 * 5 = " + (5 * 5)
+* "2 ^ 10 = " + (2 ^ 10)
+
+fuck --- THE END ---
+* ""
+* "IC what you did there."

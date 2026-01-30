@@ -1,0 +1,38 @@
+fuck Array operations demo
+fuck rayz of sunshine
+
+* "=== ARRAY DEMO ==="
+* ""
+
+fuck create an array
+nums = [1 2 3 4 5]
+* "Starting array:"
+* nums
+
+fuck get length with "inches"
+* "Length: " + nums"
+
+fuck loop through
+* ""
+* "Each element:"
+4 n n nums
+    * n
+IC
+
+fuck append with 'up'
+nums up 6
+nums up 7
+* ""
+* "After appending 6 and 7:"
+* nums
+
+fuck pop with '!!!'
+last = nums!!!
+* ""
+* "Popped: " + last
+* "Now: " + nums
+
+fuck access by index
+* ""
+* "First element: " + nums[0]
+* "Third element: " + nums[2]

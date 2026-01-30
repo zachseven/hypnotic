@@ -1,0 +1,16 @@
+fuck function test
+
+fun greet name
+* "Hello, " + name
+IC
+
+greet("World")
+
+fun add a b
+re: a + b
+IC
+
+result = add(3, 4)
+* result
+
+* "done"
