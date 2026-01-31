@@ -1,0 +1,48 @@
+name: Build Binaries
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:  # Manual trigger for testing
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            artifact: hypnotic-linux
+          - os: windows-latest
+            artifact: hypnotic-windows.exe
+          - os: macos-latest
+            artifact: hypnotic-macos
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install PyInstaller
+        run: pip install pyinstaller
+
+      - name: Build executable
+        run: pyinstaller --onefile --name hypnotic hypnotic.py
+
+      - name: Rename artifact (Unix)
+        if: matrix.os != 'windows-latest'
+        run: mv dist/hypnotic dist/${{ matrix.artifact }}
+
+      - name: Rename artifact (Windows)
+        if: matrix.os == 'windows-latest'
+        run: mv dist/hypnotic.exe dist/${{ matrix.artifact }}
+        shell: bash
+
+      - name: Upload to Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/${{ matrix.artifact }}
