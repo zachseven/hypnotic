@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hypnotic"
-version = "0.1.1"
+version = "0.1.2"
 description = "A programming language that doesn't scream at you. Phonetic shortcuts, forgiving syntax, zero indentation fascism."
 readme = "README.md"
 license = {text = "MIT"}
